@@ -1,7 +1,12 @@
 public class Hello{
     public static void main(String[] args){
-      System.out.print("Hello World");
-      System.out.print("Hello World 2 ");
+      System.out.print("HeLLO");
+      System.out.print("World");
+      System.out.print("2");
+
+      float a;
     }
+    int x = 5;
+
   }
 
