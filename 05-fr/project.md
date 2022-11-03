@@ -51,11 +51,11 @@ Osoba chcąca zakupić produkt na aukcji.
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
 * [UC2](#uc2): Otrzymanie Płatności
-* [UC2](#uc3): Przekazanie Produktu
+* [UC3](#uc3): Przekazanie Produktu
 
 [Kupujący](#ac2)
 * [UC2](#uc2): Przekazanie Płatności
-* [UC2](#uc3): Otrzymanie Produktu
+* [UC3](#uc3): Otrzymanie Produktu
 
 ---
 <a id="uc1"></a>
