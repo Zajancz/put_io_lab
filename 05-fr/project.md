@@ -89,9 +89,9 @@ Osoba chcąca zakupić produkt na aukcji.
 **Aktorzy:** [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. System weryfikuje kupującego
+1. System weryfikuje kupującego.
 2. [Kupujący](#ac2) zgłasza chęć kupna produktu, oferując cenę wyższą min. o 1zł niż poprzednia.
-2. System weryfikuje ostateczną cenę i sprawdza czy jest ona wyższa poprzedniej
+2. System weryfikuje ostateczną cenę i sprawdza czy jest ona wyższa poprzedniej.
 3. [Sprzedający](#ac1) czeka nowej wyższej ceny lub zatwierdza ostateczną cenę po czasie.
 5. System weryfikuje poprawność ostatecznej ceny.
 6. System informuje użytkownikow o ostatecznej cenie.
@@ -112,7 +112,7 @@ Osoba chcąca zakupić produkt na aukcji.
 **Aktorzy:** [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. System wyświetla formę do zrobienia płatności
+1. System wyświetla formę do zrobienia płatności.
 2. [Kupujący](#ac2) wysyła pieniądże za produkt do sprzedawcy.
 3. System weryfikuje poprawność płatności.
 4. System informuje użytkownikow o przekazaniu płatności.
@@ -132,7 +132,7 @@ Osoba chcąca zakupić produkt na aukcji.
 **Aktorzy:** [Sprzedający](#ac1)
 
 **Scenariusz główny:**
-1. System wyświetla formę do wypełnienia o przekazaniu produktu
+1. System wyświetla formę do wypełnienia o przekazaniu produktu.
 1. [Sprzedający](#ac1) wysyła formę do systemu o przekazaniu produktu.
 2. System zatwierdza przekazanie produktu.
 3. System informuje o pomyślnej sprzedaży produktu.
