@@ -50,12 +50,12 @@ Osoba chcąca zakupić produkt na aukcji.
 
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
-* [UC2](#uc2): Otrzymanie Płatności
-* [UC3](#uc3): Przekazanie Produktu
+* [UC4](#uc4): Przekazanie Produktu
 
 [Kupujący](#ac2)
-* [UC2](#uc2): Przekazanie Płatności
-* [UC3](#uc3): Otrzymanie Produktu
+* [UC2](#uc2): Przebicie Oferty
+* [UC3](#uc3): Przekazanie Płatności
+
 
 ---
 <a id="uc1"></a>
@@ -79,17 +79,22 @@ Osoba chcąca zakupić produkt na aukcji.
 ---
 
 
-<a id="uc2"></a>
-### UC2: Przekazanie/Otrzymanie Płatności
 
-**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
+
+
+
+<a id="uc2"></a>
+### UC2: Przebicie Oferty
+
+**Aktorzy:** [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. [Kupujący](#ac2) zgłasza chęć kupna produktu, oferując cenę wyższą min. o 1zł niż poprzednia.
-2. [Sprzedający](#ac1) czeka nowej wyższej ceny lub zatwierdza ostateczną cenę po czasie.
-3. System weryfikuje poprawność ostatecznej ceny.
-4. [Kupujący](#ac2) wysyła pieniądże za produkt do sprzedawcy.
-5. System weryfikuje poprawność płatności.
+1. System weryfikuje kupującego
+2. [Kupujący](#ac2) zgłasza chęć kupna produktu, oferując cenę wyższą min. o 1zł niż poprzednia.
+2. System weryfikuje ostateczną cenę i sprawdza czy jest ona wyższa poprzedniej
+3. [Sprzedający](#ac1) czeka nowej wyższej ceny lub zatwierdza ostateczną cenę po czasie.
+5. System weryfikuje poprawność ostatecznej ceny.
+6. System informuje użytkownikow o ostatecznej cenie.
 
 
 **Scenariusze alternatywne:** 
@@ -98,19 +103,36 @@ Osoba chcąca zakupić produkt na aukcji.
 * 4.A.1. System informuję użytkownika o tym. 
 * 4.A.2  Przejdż do kroku [UC1](#uc1) 1.
 
-2.A. Płatność nie przeszła
-* 4.A.1. System informuję użytkownika o tym. 
-* 4.A.2  Przejdż do kroku 4.
-
 ---
 
 
 <a id="uc3"></a>
-### UC3: Przekazanie/Otrzymanie Produktu
+### UC3: Przekazanie Płatności
 
-**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
+**Aktorzy:** [Kupujący](#ac2)
 
 **Scenariusz główny:**
+1. System wyświetla formę do zrobienia płatności
+2. [Kupujący](#ac2) wysyła pieniądże za produkt do sprzedawcy.
+3. System weryfikuje poprawność płatności.
+4. System informuje użytkownikow o przekazaniu płatności.
+
+
+**Scenariusze alternatywne:** 
+
+2.A. Płatność nie przeszła
+* 4.A.1. System informuję użytkownika o tym. 
+* 4.A.2  Przejdż do kroku 2.
+
+---
+
+<a id="uc4"></a>
+### UC4: Przekazanie Produktu
+
+**Aktorzy:** [Sprzedający](#ac1)
+
+**Scenariusz główny:**
+1. System wyświetla formę do wypełnienia o przekazaniu produktu
 1. [Sprzedający](#ac1) wysyła formę do systemu o przekazaniu produktu.
 2. System zatwierdza przekazanie produktu.
 3. System informuje o pomyślnej sprzedaży produktu.
