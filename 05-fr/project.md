@@ -50,7 +50,7 @@ Osoba chcąca zakupić produkt na aukcji.
 
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
-* [UC4](#uc4): Przekazanie Produktu
+* [UC4](#uc4): Wysyłanie kuriera 
 
 [Kupujący](#ac2)
 * [UC2](#uc2): Przebicie Oferty
@@ -91,7 +91,7 @@ Osoba chcąca zakupić produkt na aukcji.
 **Scenariusz główny:**
 1. System weryfikuje kupującego.
 2. [Kupujący](#ac2) zgłasza chęć kupna produktu, oferując cenę wyższą min. o 1zł niż poprzednia.
-2. System weryfikuje ostateczną cenę i sprawdza czy jest ona wyższa poprzedniej.
+2. System weryfikuje ostateczną cenę i sprawdza,że jest wyższa poprzedniej.
 3. [Sprzedający](#ac1) czeka nowej wyższej ceny lub zatwierdza ostateczną cenę po czasie.
 5. System weryfikuje poprawność ostatecznej ceny.
 6. System informuje użytkownikow o ostatecznej cenie.
@@ -112,10 +112,9 @@ Osoba chcąca zakupić produkt na aukcji.
 **Aktorzy:** [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. System wyświetla formę do zrobienia płatności.
-2. [Kupujący](#ac2) wysyła pieniądże za produkt do sprzedawcy.
-3. System weryfikuje poprawność płatności.
-4. System informuje użytkownikow o przekazaniu płatności.
+1. [Kupujący](#ac2) wysyła pieniądże za produkt do sprzedawcy.
+2. System weryfikuje poprawność płatności.
+3. System informuje użytkownikow o przekazaniu płatności.
 
 
 **Scenariusze alternatywne:** 
@@ -127,22 +126,22 @@ Osoba chcąca zakupić produkt na aukcji.
 ---
 
 <a id="uc4"></a>
-### UC4: Przekazanie Produktu
+### UC4: Wysyłanie kuriera 
 
 **Aktorzy:** [Sprzedający](#ac1)
 
 **Scenariusz główny:**
-1. System wyświetla formę do wypełnienia o przekazaniu produktu.
-1. [Sprzedający](#ac1) wysyła formę do systemu o przekazaniu produktu.
-2. System zatwierdza przekazanie produktu.
+1. [Sprzedający](#ac1) wysyła kuriera z produktem do kupującego.
+2. System czeka na zatwierdzenie przez kuriera o otrzymaniu produktu przez kupującego.
 3. System informuje o pomyślnej sprzedaży produktu.
 
 
 **Scenariusze alternatywne:** 
 
-1.A. Podane błędnę dane do formy
+1.A. Kurier nie dostarczył produkt do kupującego
 * 4.A.1. System informuję użytkownika o tym. 
-* 4.A.2  Przejdż do kroku 1.
+* 4.A.2  System będzie czekać na zatwierdzenie przez pocztę o otrzymaniu produktu przez kupującego.
+* 4.A.3  Przejdż do kroku 3.
 
 
 ---
