@@ -88,6 +88,7 @@ Osoba chcąca zakupić produkt na aukcji.
 4. [Kupujący](#ac2) wysyła pieniądże za produkt do sprzedawcy.
 5. System weryfikuje poprawność płatności.
 6. [Sprzedający](#ac1) przekazuje produkt kupującemu.
+7. System informuje o pomyślnej sprzedaży produktu.
 
 **Scenariusze alternatywne:** 
 
