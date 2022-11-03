@@ -77,17 +77,27 @@ Osoba chcąca zakupić produkt na aukcji.
 ---
 
 <a id="uc2"></a>
-### UC2: Kupno produktu z aukcji
+### UC2: Sprzedaż/Kupno produktu z aukcji
 
-**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2), ...
+**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. ...
+1. [Kupujący](#ac2) zgłasza chęć kupna produktu, oferując cenę wyższą min. o 1zł niż poprzednia.
+2. [Sprzedający](#ac1) czeka nowej wyższej ceny lub zatwierdza ostateczną cenę po czasie.
+3. System weryfikuje poprawność ostatecznej ceny.
+4. [Kupujący](#ac2) wysyła pieniądże za produkt do sprzedawcy.
+5. System weryfikuje poprawność płatności.
+6. [Sprzedający](#ac1) przekazuje produkt kupującemu.
 
 **Scenariusze alternatywne:** 
 
-1.A. ...
-* 4.A.1. ...
+1.A. Nikt nie zgłosił chęć kupna produktu
+* 4.A.1. System informuję użytkownika o tym. 
+* 4.A.2  Przejdż do kroku [UC1](#uc1) 1.
+
+2.A. Płatność nie przeszła
+* 4.A.1. System informuję użytkownika o tym. 
+* 4.A.2  Przejdż do kroku 4.
 
 ---
 
