@@ -50,10 +50,12 @@ Osoba chcąca zakupić produkt na aukcji.
 
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
-* [UC2](#uc2): Sprzedaż produktu z aukcji
+* [UC2](#uc2): Otrzymanie Płatności
+* [UC2](#uc3): Przekazanie Produktu
 
 [Kupujący](#ac2)
-* [UC2](#uc2): Kupno produktu z aukcji
+* [UC2](#uc2): Przekazanie Płatności
+* [UC2](#uc3): Otrzymanie Produktu
 
 ---
 <a id="uc1"></a>
@@ -76,8 +78,9 @@ Osoba chcąca zakupić produkt na aukcji.
 
 ---
 
+
 <a id="uc2"></a>
-### UC2: Sprzedaż/Kupno produktu z aukcji
+### UC2: Przekazanie/Otrzymanie Płatności
 
 **Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
 
@@ -87,9 +90,7 @@ Osoba chcąca zakupić produkt na aukcji.
 3. System weryfikuje poprawność ostatecznej ceny.
 4. [Kupujący](#ac2) wysyła pieniądże za produkt do sprzedawcy.
 5. System weryfikuje poprawność płatności.
-6. [Sprzedający](#ac1) wysyła formę do systemu o przekazaniu produktu.
-7. System zatwierdza przekazanie produktu.
-8. System informuje o pomyślnej sprzedaży produktu.
+
 
 **Scenariusze alternatywne:** 
 
@@ -100,6 +101,27 @@ Osoba chcąca zakupić produkt na aukcji.
 2.A. Płatność nie przeszła
 * 4.A.1. System informuję użytkownika o tym. 
 * 4.A.2  Przejdż do kroku 4.
+
+---
+
+
+<a id="uc3"></a>
+### UC3: Przekazanie/Otrzymanie Produktu
+
+**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
+
+**Scenariusz główny:**
+1. [Sprzedający](#ac1) wysyła formę do systemu o przekazaniu produktu.
+2. System zatwierdza przekazanie produktu.
+3. System informuje o pomyślnej sprzedaży produktu.
+
+
+**Scenariusze alternatywne:** 
+
+1.A. Podane błędnę dane do formy
+* 4.A.1. System informuję użytkownika o tym. 
+* 4.A.2  Przejdż do kroku 1.
+
 
 ---
 
